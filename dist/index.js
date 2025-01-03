@@ -15,16 +15,20 @@ const person = [2, "jane"];
 const people = [
     [1, "Maria"],
     [2, "Joao"],
-    [3, "Junior"]
+    [3, "Junior"],
 ];
 // Intersections
-let productId = '1';
+let productId = "1";
 productId = true;
 //Enum
 var Direction;
 (function (Direction) {
     Direction[Direction["Up"] = 1] = "Up";
-    Direction[Direction["Down"] = 2] = "Down";
+    Direction["Down"] = "down";
 })(Direction || (Direction = {}));
 const direction = Direction.Up;
+// Tye Assertions
+const productName = "Boné";
+//let itemId = productName as string;
+let itemId = productName;
 console.log(direction);
