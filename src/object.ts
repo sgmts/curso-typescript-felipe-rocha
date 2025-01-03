@@ -11,13 +11,19 @@ type User = {
   email: string;
   password?: string;
   orders: Order[];
+  register(): string
+
 }; // ? deixa o parametro opcional
+
 
 const user: User = {
   firstName: "Joao",
   age: 20,
   email: "lalala@email.com",
   orders: [{ productId: "1", price: 200 }],
+  register() {
+    return "a"
+  }
 };
 
 const printLog = (message: string) => {};
@@ -37,17 +43,24 @@ const author: Author & User = {
   email: "lalal@gmail.com",
   firstName: "Zezinho",
   orders: [],
+  register() {
+    return "a"
+  }
 };
 
 // Interfaces
 interface UserInterface {
     readonly firstName: string
     email: string
+    login(): string
 }
 
 const emailUSer: UserInterface = {
     email: 'emaillalalal@email',
-    firstName: 'Lele'
+    firstName: 'Lele',
+    login() {
+        return "a"
+    }
 } 
 
 emailUSer.email = '2'
@@ -60,9 +73,12 @@ interface AuthorInterface {
 const newAuthor: UserInterface & AuthorInterface = {
     email: 'email@email.com',
     firstName: "Felipe",
-    books: []
+    books: [],
+    login() {
+        return "a"
+    }
 }
-
 
 type Grade = number | string
 const grade: Grade = 1
+
